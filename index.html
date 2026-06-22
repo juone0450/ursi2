@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ursi | Advanced Dentistry</title>
+    <meta name="description" content="Diseño Radical Odontológico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="custom-cursor"></div>
+
+    <!-- Pill Navigation -->
+    <div class="nav-pill-wrapper">
+        <nav class="nav-pill hover-target">
+            <div class="nav-logo">URSI</div>
+            <div class="nav-links">
+                <a href="#about" class="hover-target">Consultorio</a>
+                <a href="#treatments" class="hover-target">Tratamientos</a>
+            </div>
+            <a href="#contact" class="btn-nav hover-target">Contactar</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-images" id="hero-images">
+            <div class="hero-img-floating hero-img-1">
+                <img src="assets/images/smiling_patient_premium.png" alt="Patient">
+            </div>
+            <div class="hero-img-floating hero-img-2">
+                <img src="assets/images/clinic_interior_premium.png" alt="Clinic">
+            </div>
+        </div>
+        <div class="hero-text-wrapper">
+            <h1 class="huge-text hover-target">Perfect<br><span class="outline">Smiles</span></h1>
+        </div>
+    </section>
+
+    <!-- Bento Box Section (About) -->
+    <section class="bento-section" id="about">
+        <h2>La Clínica</h2>
+        <div class="bento-grid">
+            <div class="bento-item bento-large hover-target">
+                <img src="assets/images/clinic_interior_premium.png" alt="Interior">
+                <div class="bento-overlay">
+                    <h3>Arquitectura de Vanguardia</h3>
+                </div>
+            </div>
+            <div class="bento-item bento-stat hover-target">
+                <h3>15+</h3>
+                <p>Años perfeccionando el arte dental.</p>
+            </div>
+            <div class="bento-item bento-stat hover-target" style="background: var(--text-main); color: var(--bg-dark);">
+                <h3 style="color: var(--bg-dark);">100%</h3>
+                <p style="color: var(--surface-dark);">Tecnología Digital</p>
+            </div>
+            <div class="bento-item bento-wide bento-quote hover-target">
+                <h3>"La odontología no es solo salud, es diseño de la autoestima."</h3>
+                <p style="margin-top: 16px; color: var(--accent-neon);">— Dra. Mercedes Ursi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accordion Treatments -->
+    <section class="treatments-section" id="treatments">
+        <h2>Especialidades</h2>
+        <div class="accordion-container">
+            <div class="accordion-item hover-target">
+                <div class="accordion-bg">
+                    <img src="assets/images/dental_tools_premium.png" alt="Tools">
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-title"><span>01</span> Diagnóstico 3D</div>
+                    <div class="accordion-details">
+                        <p>Evaluación digital con escáner intraoral.</p>
+                        <div class="price-tag">Desde $30.000</div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item hover-target">
+                <div class="accordion-bg">
+                    <img src="assets/images/smiling_patient_premium.png" alt="Smile">
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-title"><span>02</span> Blanqueamiento</div>
+                    <div class="accordion-details">
+                        <p>Láser de última generación en una sesión.</p>
+                        <div class="price-tag">Desde $250.000</div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item hover-target">
+                <div class="accordion-bg" style="background: #111;"></div>
+                <div class="accordion-content">
+                    <div class="accordion-title"><span>03</span> Diseño de Sonrisa</div>
+                    <div class="accordion-details">
+                        <p>Carillas de porcelana ultrafinas.</p>
+                        <div class="price-tag">Consultar valor</div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item hover-target">
+                <div class="accordion-bg" style="background: #222;"></div>
+                <div class="accordion-content">
+                    <div class="accordion-title"><span>04</span> Cirugía Avanzada</div>
+                    <div class="accordion-details">
+                        <p>Implantes y procedimientos guiados por computadora.</p>
+                        <div class="price-tag">Desde $150.000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Magnetic Form -->
+    <section class="contact-section" id="contact">
+        <div class="contact-text">
+            <h2>Hablemos.<br>Tu sonrisa<br><span style="color: var(--accent-neon);">lo vale.</span></h2>
+        </div>
+        <div class="contact-form">
+            <form id="whatsappForm">
+                <input type="text" id="name" name="name" class="input-magnetic hover-target" placeholder="Tu Nombre" required>
+                <select id="treatment" name="treatment" class="input-magnetic hover-target" style="background: var(--bg-dark);">
+                    <option value="Consulta">Consulta Diagnóstica</option>
+                    <option value="Estética">Estética Dental</option>
+                    <option value="Implantes">Implantes</option>
+                </select>
+                <div style="text-align: right; margin-top: 40px;">
+                    <button type="submit" class="btn-magnetic magnetic-target hover-target">
+                        <span class="magnetic-text">Enviar a<br>WhatsApp</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 URSI ADVANCED DENTISTRY</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
