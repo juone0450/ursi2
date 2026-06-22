@@ -98,4 +98,77 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    /* --- Theme Toggle --- */
+    const themeToggle = document.getElementById('theme-toggle');
+    let isLight = false;
+
+    themeToggle.addEventListener('click', () => {
+        isLight = !isLight;
+        if (isLight) {
+            document.body.classList.add('light-theme');
+            themeToggle.innerText = '🌙';
+        } else {
+            document.body.classList.remove('light-theme');
+            themeToggle.innerText = '☀️';
+        }
+    });
+
+    /* --- Language Toggle (Local Fast API/Dictionary) --- */
+    const langToggle = document.getElementById('lang-toggle');
+    let isEng = false;
+
+    const dict = {
+        nav_about: { es: 'Consultorio', en: 'Clinic' },
+        nav_treatments: { es: 'Tratamientos', en: 'Treatments' },
+        nav_contact: { es: 'Contactar', en: 'Contact' },
+        about_title: { es: 'La Clínica', en: 'The Clinic' },
+        about_arch: { es: 'Lugar Discreto', en: 'Discreet Location' },
+        about_years: { es: 'Años perfeccionando el arte dental.', en: 'Years perfecting dental art.' },
+        about_tech: { es: 'Tecnología Digital', en: 'Digital Technology' },
+        about_quote: { es: '"La odontología no es solo salud, es diseño de la autoestima."', en: '"Dentistry is not just health, it\'s the design of self-esteem."' },
+        treatments_title: { es: 'Especialidades', en: 'Specialties' },
+        t1_title: { es: 'Diagnóstico 3D', en: '3D Diagnosis' },
+        t1_desc: { es: 'Evaluación digital con escáner intraoral.', en: 'Digital evaluation with intraoral scanner.' },
+        t1_price: { es: 'Desde $30.000', en: 'From $30.000' },
+        t2_title: { es: 'Blanqueamiento', en: 'Whitening' },
+        t2_desc: { es: 'Láser de última generación en una sesión.', en: 'Next-gen laser in one session.' },
+        t2_price: { es: 'Desde $250.000', en: 'From $250.000' },
+        t3_title: { es: 'Diseño de Sonrisa', en: 'Smile Design' },
+        t3_desc: { es: 'Carillas de porcelana ultrafinas.', en: 'Ultra-thin porcelain veneers.' },
+        t3_price: { es: 'Consultar valor', en: 'Ask for price' },
+        t4_title: { es: 'Cirugía Avanzada', en: 'Advanced Surgery' },
+        t4_desc: { es: 'Implantes y procedimientos guiados por computadora.', en: 'Implants & computer-guided procedures.' },
+        t4_price: { es: 'Desde $150.000', en: 'From $150.000' },
+        opt_1: { es: 'Consulta Diagnóstica', en: 'Diagnostic Consultation' },
+        opt_2: { es: 'Estética Dental', en: 'Dental Aesthetics' },
+        opt_3: { es: 'Implantes', en: 'Implants' }
+    };
+
+    langToggle.addEventListener('click', () => {
+        isEng = !isEng;
+        langToggle.innerText = isEng ? 'ES' : 'EN';
+        const lang = isEng ? 'en' : 'es';
+
+        // Translate basic text elements
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (dict[key]) {
+                el.innerText = dict[key][lang];
+            }
+        });
+
+        // Translate placeholders
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (key === 'contact_name') {
+                el.setAttribute('placeholder', isEng ? 'Your Name' : 'Tu Nombre');
+            }
+        });
+
+        // Translate HTML elements
+        document.getElementById('hero-title').innerHTML = isEng ? 'Perfect<br><span class="outline">Smiles</span>' : 'Sonrisas<br><span class="outline">Perfectas</span>';
+        document.getElementById('contact-title').innerHTML = isEng ? 'Let\'s Talk.<br>Your smile<br><span style="color: var(--accent-neon);">is worth it.</span>' : 'Hablemos.<br>Tu sonrisa<br><span style="color: var(--accent-neon);">lo vale.</span>';
+        document.getElementById('btn-send').innerHTML = isEng ? 'Send to<br>WhatsApp' : 'Enviar a<br>WhatsApp';
+    });
 });

@@ -20,10 +20,14 @@
         <nav class="nav-pill hover-target">
             <div class="nav-logo">URSI</div>
             <div class="nav-links">
-                <a href="#about" class="hover-target">Consultorio</a>
-                <a href="#treatments" class="hover-target">Tratamientos</a>
+                <a href="#about" class="hover-target" data-i18n="nav_about">Consultorio</a>
+                <a href="#treatments" class="hover-target" data-i18n="nav_treatments">Tratamientos</a>
             </div>
-            <a href="#contact" class="btn-nav hover-target">Contactar</a>
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <button id="theme-toggle" class="icon-btn hover-target" title="Cambiar Tema">☀️</button>
+                <button id="lang-toggle" class="icon-btn hover-target" title="Change Language">EN</button>
+                <a href="#contact" class="btn-nav hover-target" data-i18n="nav_contact">Contactar</a>
+            </div>
         </nav>
     </div>
 
@@ -39,30 +43,30 @@
             </div>
         </div>
         <div class="hero-text-wrapper">
-            <h1 class="huge-text hover-target">Perfect<br><span class="outline">Smiles</span></h1>
+            <h1 class="huge-text hover-target" id="hero-title">Sonrisas<br><span class="outline">Perfectas</span></h1>
         </div>
     </section>
 
     <!-- Bento Box Section (About) -->
     <section class="bento-section" id="about">
-        <h2>La Clínica</h2>
+        <h2 data-i18n="about_title">La Clínica</h2>
         <div class="bento-grid">
             <div class="bento-item bento-large hover-target">
                 <img src="assets/images/clinic_interior_premium.png" alt="Interior">
                 <div class="bento-overlay">
-                    <h3>Arquitectura de Vanguardia</h3>
+                    <h3 data-i18n="about_arch">Lugar Discreto</h3>
                 </div>
             </div>
             <div class="bento-item bento-stat hover-target">
                 <h3>15+</h3>
-                <p>Años perfeccionando el arte dental.</p>
+                <p data-i18n="about_years">Años perfeccionando el arte dental.</p>
             </div>
             <div class="bento-item bento-stat hover-target" style="background: var(--text-main); color: var(--bg-dark);">
                 <h3 style="color: var(--bg-dark);">100%</h3>
-                <p style="color: var(--surface-dark);">Tecnología Digital</p>
+                <p style="color: var(--surface-dark);" data-i18n="about_tech">Tecnología Digital</p>
             </div>
             <div class="bento-item bento-wide bento-quote hover-target">
-                <h3>"La odontología no es solo salud, es diseño de la autoestima."</h3>
+                <h3 data-i18n="about_quote">"La odontología no es solo salud, es diseño de la autoestima."</h3>
                 <p style="margin-top: 16px; color: var(--accent-neon);">— Dra. Mercedes Ursi</p>
             </div>
         </div>
@@ -70,17 +74,17 @@
 
     <!-- Accordion Treatments -->
     <section class="treatments-section" id="treatments">
-        <h2>Especialidades</h2>
+        <h2 data-i18n="treatments_title">Especialidades</h2>
         <div class="accordion-container">
             <div class="accordion-item hover-target">
                 <div class="accordion-bg">
                     <img src="assets/images/dental_tools_premium.png" alt="Tools">
                 </div>
                 <div class="accordion-content">
-                    <div class="accordion-title"><span>01</span> Diagnóstico 3D</div>
+                    <div class="accordion-title"><span>01</span> <span data-i18n="t1_title">Diagnóstico 3D</span></div>
                     <div class="accordion-details">
-                        <p>Evaluación digital con escáner intraoral.</p>
-                        <div class="price-tag">Desde $30.000</div>
+                        <p data-i18n="t1_desc">Evaluación digital con escáner intraoral.</p>
+                        <div class="price-tag" data-i18n="t1_price">Desde $30.000</div>
                     </div>
                 </div>
             </div>
@@ -89,30 +93,30 @@
                     <img src="assets/images/smiling_patient_premium.png" alt="Smile">
                 </div>
                 <div class="accordion-content">
-                    <div class="accordion-title"><span>02</span> Blanqueamiento</div>
+                    <div class="accordion-title"><span>02</span> <span data-i18n="t2_title">Blanqueamiento</span></div>
                     <div class="accordion-details">
-                        <p>Láser de última generación en una sesión.</p>
-                        <div class="price-tag">Desde $250.000</div>
+                        <p data-i18n="t2_desc">Láser de última generación en una sesión.</p>
+                        <div class="price-tag" data-i18n="t2_price">Desde $250.000</div>
                     </div>
                 </div>
             </div>
             <div class="accordion-item hover-target">
                 <div class="accordion-bg" style="background: #111;"></div>
                 <div class="accordion-content">
-                    <div class="accordion-title"><span>03</span> Diseño de Sonrisa</div>
+                    <div class="accordion-title"><span>03</span> <span data-i18n="t3_title">Diseño de Sonrisa</span></div>
                     <div class="accordion-details">
-                        <p>Carillas de porcelana ultrafinas.</p>
-                        <div class="price-tag">Consultar valor</div>
+                        <p data-i18n="t3_desc">Carillas de porcelana ultrafinas.</p>
+                        <div class="price-tag" data-i18n="t3_price">Consultar valor</div>
                     </div>
                 </div>
             </div>
             <div class="accordion-item hover-target">
                 <div class="accordion-bg" style="background: #222;"></div>
                 <div class="accordion-content">
-                    <div class="accordion-title"><span>04</span> Cirugía Avanzada</div>
+                    <div class="accordion-title"><span>04</span> <span data-i18n="t4_title">Cirugía Avanzada</span></div>
                     <div class="accordion-details">
-                        <p>Implantes y procedimientos guiados por computadora.</p>
-                        <div class="price-tag">Desde $150.000</div>
+                        <p data-i18n="t4_desc">Implantes y procedimientos guiados por computadora.</p>
+                        <div class="price-tag" data-i18n="t4_price">Desde $150.000</div>
                     </div>
                 </div>
             </div>
@@ -122,19 +126,19 @@
     <!-- Contact Magnetic Form -->
     <section class="contact-section" id="contact">
         <div class="contact-text">
-            <h2>Hablemos.<br>Tu sonrisa<br><span style="color: var(--accent-neon);">lo vale.</span></h2>
+            <h2 id="contact-title">Hablemos.<br>Tu sonrisa<br><span style="color: var(--accent-neon);">lo vale.</span></h2>
         </div>
         <div class="contact-form">
             <form id="whatsappForm">
-                <input type="text" id="name" name="name" class="input-magnetic hover-target" placeholder="Tu Nombre" required>
-                <select id="treatment" name="treatment" class="input-magnetic hover-target" style="background: var(--bg-dark);">
-                    <option value="Consulta">Consulta Diagnóstica</option>
-                    <option value="Estética">Estética Dental</option>
-                    <option value="Implantes">Implantes</option>
+                <input type="text" id="name" name="name" class="input-magnetic hover-target" placeholder="Tu Nombre" data-i18n-placeholder="contact_name" required>
+                <select id="treatment" name="treatment" class="input-magnetic hover-target" style="background: var(--bg-dark); color: var(--text-main);">
+                    <option value="Consulta" data-i18n="opt_1">Consulta Diagnóstica</option>
+                    <option value="Estética" data-i18n="opt_2">Estética Dental</option>
+                    <option value="Implantes" data-i18n="opt_3">Implantes</option>
                 </select>
                 <div style="text-align: right; margin-top: 40px;">
                     <button type="submit" class="btn-magnetic magnetic-target hover-target">
-                        <span class="magnetic-text">Enviar a<br>WhatsApp</span>
+                        <span class="magnetic-text" id="btn-send">Enviar a<br>WhatsApp</span>
                     </button>
                 </div>
             </form>
@@ -142,7 +146,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 URSI ADVANCED DENTISTRY</p>
+        <p>&copy; <span id="year">2026</span> URSI ADVANCED DENTISTRY</p>
     </footer>
 
     <script src="script.js"></script>

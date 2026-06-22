@@ -499,3 +499,76 @@ footer {
         display: none; /* Ocultar en móvil para dar protagonismo al texto */
     }
 }
+
+/* --- Light Theme Overrides --- */
+body.light-theme {
+    --bg-dark: #FAFAFA;
+    --surface-dark: #FFFFFF;
+    --surface-light: #F0F0F0;
+    --text-main: #111111;
+    --text-muted: #555555;
+    --accent-neon: #00A388; /* Darker cyan for better contrast */
+}
+
+body.light-theme .nav-pill {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .cursor {
+    mix-blend-mode: normal;
+    opacity: 0.8;
+}
+
+body.light-theme .cursor.hovered {
+    background-color: rgba(0,0,0,0.1);
+    mix-blend-mode: normal;
+}
+
+body.light-theme .bento-item,
+body.light-theme .accordion-item {
+    border-color: rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+body.light-theme .hero-text-wrapper {
+    mix-blend-mode: normal;
+}
+
+body.light-theme .hero-text-wrapper span.outline {
+    -webkit-text-stroke: 2px rgba(17, 17, 17, 0.8);
+    color: transparent;
+}
+
+body.light-theme .input-magnetic {
+    color: #111;
+    border-bottom-color: rgba(0,0,0,0.2);
+}
+
+body.light-theme .input-magnetic::placeholder {
+    color: rgba(0,0,0,0.3);
+}
+
+body.light-theme footer {
+    border-top-color: rgba(0,0,0,0.05);
+}
+
+/* --- Icon Buttons --- */
+.icon-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.2rem;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: none;
+    transition: var(--transition-snappy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover {
+    color: var(--accent-neon);
+    transform: scale(1.1);
+}
